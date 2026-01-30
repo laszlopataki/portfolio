@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b0f19"/>
+      <stop offset="100%" style="stop-color:#141d2f"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="15%" cy="20%" r="50%">
+      <stop offset="0%" style="stop-color:rgba(122,162,255,0.25)"/>
+      <stop offset="100%" style="stop-color:transparent"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="85%" cy="30%" r="40%">
+      <stop offset="0%" style="stop-color:rgba(110,231,183,0.18)"/>
+      <stop offset="100%" style="stop-color:transparent"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+  
+  <!-- Border -->
+  <rect x="40" y="40" width="1120" height="550" rx="24" fill="none" stroke="#23304f" stroke-width="2"/>
+  
+  <!-- Name -->
+  <text x="80" y="140" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="42" font-weight="700" fill="#7aa2ff">Laszlo Pataki</text>
+  
+  <!-- Title -->
+  <text x="80" y="220" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="58" font-weight="800" fill="#6ee7b7">Senior IoT / Embedded Engineer</text>
+  
+  <!-- Tagline -->
+  <text x="80" y="290" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="28" fill="#e8ecf7">Building reliable, scalable connected products</text>
+  <text x="80" y="330" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="28" fill="#e8ecf7">from prototype to fleet operations.</text>
+  
+  <!-- Keywords line -->
+  <text x="80" y="420" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="22" fill="#a8b3cf">Embedded C/C++ • ESP32 • STM32 • FreeRTOS • Linux • AWS IoT Core</text>
+  <text x="80" y="460" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="22" fill="#a8b3cf">OTA • MQTT • TCP/IP • HIL/SIL • CI/CD • Python</text>
+  
+  <!-- Proof points -->
+  <g transform="translate(80, 510)">
+    <rect x="0" y="0" width="200" height="60" rx="8" fill="rgba(11,15,25,0.6)" stroke="#23304f"/>
+    <text x="100" y="25" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#6ee7b7" text-anchor="middle">Led 13-person team</text>
+    <text x="100" y="48" font-family="system-ui, sans-serif" font-size="14" fill="#a8b3cf" text-anchor="middle">Cross-functional IoT</text>
+  </g>
+  <g transform="translate(300, 510)">
+    <rect x="0" y="0" width="200" height="60" rx="8" fill="rgba(11,15,25,0.6)" stroke="#23304f"/>
+    <text x="100" y="25" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#6ee7b7" text-anchor="middle">1M+ scale architecture</text>
+    <text x="100" y="48" font-family="system-ui, sans-serif" font-size="14" fill="#a8b3cf" text-anchor="middle">Fleet capacity design</text>
+  </g>
+  <g transform="translate(520, 510)">
+    <rect x="0" y="0" width="200" height="60" rx="8" fill="rgba(11,15,25,0.6)" stroke="#23304f"/>
+    <text x="100" y="25" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#6ee7b7" text-anchor="middle">10-year battery life</text>
+    <text x="100" y="48" font-family="system-ui, sans-serif" font-size="14" fill="#a8b3cf" text-anchor="middle">Production deployed</text>
+  </g>
+  <g transform="translate(740, 510)">
+    <rect x="0" y="0" width="200" height="60" rx="8" fill="rgba(11,15,25,0.6)" stroke="#23304f"/>
+    <text x="100" y="25" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#6ee7b7" text-anchor="middle">90% cost reduction</text>
+    <text x="100" y="48" font-family="system-ui, sans-serif" font-size="14" fill="#a8b3cf" text-anchor="middle">Sensing approach</text>
+  </g>
+  
+  <!-- Location badge -->
+  <g transform="translate(1000, 510)">
+    <rect x="0" y="0" width="120" height="60" rx="8" fill="rgba(122,162,255,0.15)" stroke="#7aa2ff"/>
+    <text x="60" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="#7aa2ff" text-anchor="middle">📍 London, UK</text>
+    <text x="60" y="50" font-family="system-ui, sans-serif" font-size="12" fill="#a8b3cf" text-anchor="middle">EU Citizen</text>
+  </g>
+</svg>

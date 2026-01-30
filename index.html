@@ -1,17 +1,28 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%236ee7b7'/%3E%3Ctext x='32' y='42' font-size='32' text-anchor='middle' fill='%230b0f19' font-family='Arial' font-weight='bold'%3ELP%3C/text%3E%3C/svg%3E">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b0f19">
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:site_name" content="Laszlo Pataki Portfolio" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Laszlo Pataki | Senior IoT / Embedded Engineer" />
+    <meta name="twitter:description" content="10 years building reliable connected products from prototype to fleet scale. Embedded C/C++, ESP32, STM32, FreeRTOS, Linux, AWS IoT Core, OTA, MQTT, CI/CD, Python." />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Laszlo Pataki | Senior Embedded and IoT Engineer</title>
-  <meta name="description" content="Senior Embedded and IoT Engineer with 10 years experience building reliable connected products from prototype to fleet scale. Embedded C/C++, ESP32, STM32, RTOS, AWS IoT, OTA, and industrialisation." />
-  <meta name="keywords" content="embedded engineer, IoT engineer, embedded C, C++, ESP32, STM32, ARM Cortex-M, FreeRTOS, RTOS, AWS IoT Core, MQTT, LoRaWAN, BLE, OTA, fleet management, device drivers, low power, CI/CD, HIL, ATE, Python automation" />
+  <title>Laszlo Pataki | Senior IoT / Embedded Engineer</title>
+  <meta name="description" content="Laszlo Pataki – Senior IoT / Embedded Engineer. 10 years building reliable connected products from prototype to fleet scale. Embedded C/C++, ESP32, STM32, FreeRTOS, Linux, AWS IoT Core, OTA, MQTT, CI/CD, Python." />
+  <meta name="keywords" content="Laszlo Pataki, IoT, Embedded Engineer, Embedded C, C++, ESP32, STM32, ARM Cortex-M, FreeRTOS, Linux, AWS IoT Core, MQTT, LoRaWAN, BLE, OTA, fleet management, device drivers, low power, CI/CD, HIL, SIL, Python automation" />
   <meta name="author" content="Laszlo Pataki" />
-  
+
   <!-- Open Graph for LinkedIn sharing -->
-  <meta property="og:title" content="Laszlo Pataki | Senior Embedded and IoT Engineer" />
-  <meta property="og:description" content="10 years building reliable connected products from prototype to fleet scale. Embedded C/C++, ESP32, STM32, AWS IoT, OTA strategy." />
+  <meta property="og:title" content="Laszlo Pataki | Senior IoT / Embedded Engineer" />
+  <meta property="og:description" content="10 years building reliable connected products from prototype to fleet scale. Embedded C/C++, ESP32, STM32, FreeRTOS, Linux, AWS IoT Core, OTA, MQTT, CI/CD, Python." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://laszlopataki.github.io/portfolio/assets/og.png" />
+  <meta property="og:url" content="https://laszlopataki.github.io/portfolio/" />
+  <meta name="twitter:image" content="https://laszlopataki.github.io/portfolio/assets/og.png" />
 
   <style>
     :root{
@@ -203,6 +214,23 @@
       color:var(--text);
     }
 
+    .card-toggle{
+      background: rgba(122,162,255,.12);
+      border: 1px solid rgba(122,162,255,.3);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .card-toggle:hover{
+      background: rgba(122,162,255,.2);
+      border-color: var(--accent);
+    }
+
     .twoCol{display:grid; grid-template-columns:1fr 1fr; gap:10px}
     @media (max-width: 680px){ .twoCol{grid-template-columns:1fr} }
     .bucket{padding:10px 12px; border:1px solid rgba(35,48,79,.7); border-radius:10px; background:var(--panel2)}
@@ -239,42 +267,150 @@
   </style>
 </head>
 
-<body>
-  <div class="wrap">
-    <header>
-      <div>
-        <h1>Laszlo Pataki</h1>
-        <div class="role">Senior Embedded and IoT Engineer | 10 Years | London, UK</div>
-        <div class="chips">
-          <span class="chip">Embedded C/C++</span>
-          <span class="chip">ESP32 | STM32 | ARM Cortex M</span>
-          <span class="chip">FreeRTOS</span>
-          <span class="chip">AWS IoT Core | OTA</span>
-          <span class="chip">LoRaWAN | BLE | MQTT</span>
+  <body>
+  <a href="#main" class="skip-link" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:1000;background:#fff;color:#0b0f19;padding:8px 16px;border-radius:6px;">Skip to main content</a>
+  <div class="wrap" id="main">
+
+    <header class="hero-header">
+      <div class="hero-name-block">
+        <div class="hero-name">Laszlo Pataki</div>
+        <h1 class="hero-title">Senior IoT / Embedded Engineer</h1>
+        <div class="hero-value">Building reliable, scalable, and secure connected products with hands-on, end-to-end leadership.</div>
+        <div class="hero-keywords">
+          Embedded C/C++ &bull; ESP32 &bull; STM32 &bull; FreeRTOS &bull; Linux (Yocto/Ubuntu Core/Ubuntu 22.04/Alpine/Raspbian) &bull; AWS IoT Core &bull; OTA &bull; MQTT &bull; CI/CD &bull; Python
         </div>
       </div>
-
       <div class="cta">
-        <a class="btn primary" href="mailto:laszlo_pataki@outlook.com">Email Me</a>
+        <a class="btn primary" href="assets/Laszlo_Pataki_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+        <a class="btn" href="mailto:laszlo_pataki@outlook.com">Email</a>
         <a class="btn" href="https://www.linkedin.com/in/laszlo-pataki/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn" href="assets/Laszlo_Pataki_CV.pdf" target="_blank" rel="noopener">CV</a>
       </div>
     </header>
 
-    <div class="hero">
-      <p>
-        I ship <span class="highlight">reliable connected products</span> from prototype to production fleet.
-        I combine hands on firmware and architecture with technical leadership across hardware, cloud, test, and industrialization.
-      </p>
-    </div>
+    <section class="hero-proof">
+      <ul class="proof-list">
+        <li><span class="proof-num">Led 13-person</span> cross-functional team<span class="proof-qual">Firmware, HW, cloud, test, industrialization</span></li>
+        <li><span class="proof-num">1M+ scale</span> architecture designed<span class="proof-qual">Target architecture + capacity plan for next-gen fleet</span></li>
+        <li><span class="proof-num">10-year</span> battery life<span class="proof-qual">STM32 + Sub GHz + e-paper, shipped to social housing</span></li>
+        <li><span class="proof-num">90% cost</span> reduction in sensing<span class="proof-qual">Novel pH + water level technique for mass production</span></li>
+      </ul>
+    </section>
 
-    <!-- Key metrics highlight strip -->
-    <div class="highlights">
-      <div class="hl"><span class="hl-num">13</span><span class="hl-label">Person team led</span></div>
-      <div class="hl"><span class="hl-num">1M</span><span class="hl-label">Device architecture</span></div>
-      <div class="hl"><span class="hl-num">10yr</span><span class="hl-label">Battery life achieved</span></div>
-      <div class="hl"><span class="hl-num">90%</span><span class="hl-label">Cost reduction</span></div>
-    </div>
+    <style>
+      .hero-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 32px;
+        margin-bottom: 0;
+      }
+      .hero-name-block {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .hero-name {
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--accent);
+        letter-spacing: 0.2px;
+        margin-bottom: 2px;
+      }
+      .hero-title {
+        font-size: clamp(28px, 5vw, 38px);
+        font-weight: 800;
+        margin: 0 0 8px 0;
+        letter-spacing: 0.2px;
+        color: var(--accent2);
+      }
+      .hero-value {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        color: var(--text);
+      }
+      .hero-keywords {
+        font-size: 15px;
+        color: var(--muted);
+        margin-bottom: 0;
+        letter-spacing: 0.1px;
+        white-space: pre-line;
+        word-break: break-word;
+      }
+      .hero-proof {
+        margin: 32px 0 32px 0;
+      }
+      .proof-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        justify-content: flex-start;
+      }
+      .proof-list li {
+        font-size: 15px;
+        color: var(--text);
+        background: var(--panel2);
+        border-radius: 8px;
+        padding: 14px 12px;
+        border: 1px solid var(--line);
+        font-weight: 500;
+        min-width: 140px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.3;
+      }
+      .proof-num {
+        color: var(--accent2);
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 2px;
+        margin-right: 0;
+        display: block;
+      }
+      .proof-qual {
+        display: block;
+        font-size: 11px;
+        color: var(--muted);
+        font-weight: 400;
+        margin-top: 4px;
+        line-height: 1.3;
+      }
+      .cta {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: flex-start;
+      }
+      .btn.primary {
+        border-color: rgba(122,162,255,.6);
+        background: linear-gradient(180deg, rgba(122,162,255,.25), rgba(16,24,42,.75));
+        color: #fff;
+        box-shadow: 0 2px 8px 0 rgba(122,162,255,.10);
+      }
+      @media (max-width: 700px) {
+        .hero-header { flex-direction: column; gap: 18px; }
+        .proof-list { grid-template-columns: 1fr; gap: 12px; }
+        .proof-list li { min-width: 0; }
+        .hero-keywords { font-size: 14px; }
+        .hero-name { font-size: 18px; }
+      }
+    </style>
+
+    <section class="what-i-do" style="margin-bottom:24px">
+      <h2>What I Do</h2>
+      <ul>
+        <li><strong>End-to-end connected products:</strong> From prototype → production → fleet operations, I own firmware, cloud integration, and industrialization.</li>
+        <li><strong>OTA rollout strategy &amp; safety:</strong> Staged rollouts, cohorting, monitoring, and rollback-ready updates for reliable field upgrades.</li>
+        <li><strong>Bridging firmware ↔ cloud:</strong> Connecting device logic to control plane and data plane—MQTT, AWS IoT Core, fleet provisioning, and observability.</li>
+      </ul>
+    </section>
 
     <section style="margin-bottom:24px">
       <h2>What I Am Looking For</h2>
@@ -286,255 +422,352 @@
     </section>
 
     <section>
+
       <h2>Selected Projects</h2>
       <div class="cards">
-
-          <div class="card">
-            <h3>Deputy Head of IoT, Fleet Scale Platform</h3>
-            <div class="meta">
-              <a href="https://skycell.ch/" target="_blank" rel="noopener">SkyCell AG ↗</a>
-              <span>Pharma Cold Chain</span>
-              <span>2025</span>
-            </div>
-            <div class="card-img-grid">
-              <img src="assets/skycell_iotx.jpg" alt="SkyCell IoT X logger">
-              <img src="assets/skycell_connect.jpg" alt="SkyCell IoT X Connect">
-              <img src="assets/skycell_cube.jpg" alt="SkyCell ULD Cube">
-              <img src="assets/skycell_track.jpg" alt="SkyCell ULD Track">
-            </div>
-            
+        <!-- Project Card Template: outcomes first, collapsible details -->
+        <div class="card">
+          <div class="card-img-grid">
+            <img src="assets/skycell_iotx.jpg" alt="SkyCell IoT X logger">
+            <img src="assets/skycell_connect.jpg" alt="SkyCell IoT X Connect">
+            <img src="assets/skycell_cube.jpg" alt="SkyCell ULD Cube">
+            <img src="assets/skycell_track.jpg" alt="SkyCell ULD Track">
+          </div>
+          <div class="meta">
+            <a href="https://skycell.ch/" target="_blank" rel="noopener">SkyCell AG ↗</a>
+            <span>Pharma Cold Chain</span>
+            <span>STM32</span>
+            <span>2025</span>
+          </div>
+          <h3>Deputy Head of IoT, Fleet Scale Platform</h3>
+          <div class="card-section outcomes">
+            <div class="card-label">Outcomes</div>
+            <ul>
+              <li>Designed architecture for <span class="metric">1M+ device scale</span></li>
+              <li>Transformed knowledge silos into cross-functional team</li>
+              <li>Improved delivery predictability and quality</li>
+            </ul>
+          </div>
+          <button class="card-toggle" onclick="toggleCard(this)">Show Details</button>
+          <div class="card-details" style="display:none">
             <div class="card-section">
-              <div class="card-label">Problem</div>
-              <p style="margin:0;font-size:14px">Pharma cold chain monitoring needed to scale from current fleet to 1M devices while improving reliability, OTA, and Cyber Resilience Act compliance.</p>
+              <div class="card-label">Context</div>
+              <p style="margin:0;font-size:14px">Pharma cold chain monitoring needed to scale from current fleet to 1M devices while improving reliability and Cyber Resilience Act compliance.</p>
             </div>
-            
             <div class="card-section">
-              <div class="card-label">My Role</div>
+              <div class="card-label">Constraints</div>
+              <p style="margin:0;font-size:14px">LoRaWAN bandwidth limits, regulatory compliance deadlines, distributed remote team across multiple time zones.</p>
+            </div>
+            <div class="card-section">
+              <div class="card-label">My Ownership</div>
               <ul>
-                <li>Led <span class="metric">13 person</span> cross functional remote IoT team across firmware, hardware, cloud, test, and industrialization</li>
-                <li>Owned end to end IoT architecture from device to connectivity to cloud ingestion to operations workflows</li>
-                <li>Defined OTA and fleet rollout strategy with staging, cohorting, monitoring, and rollback readiness</li>
+                <li>Led <span class="metric">13-person</span> cross-functional remote IoT team</li>
+                <li>Owned end-to-end IoT architecture from device to cloud</li>
+                <li>Defined OTA and fleet rollout strategy</li>
               </ul>
             </div>
-            
             <div class="card-section">
               <div class="card-label">Key Decisions</div>
               <ul>
-                <li>Drove build vs buy decision for LoRa OTA, selecting external partner to avoid long term maintenance burden</li>
-                <li>Initiated Cyber Resilience Act compliance workstream with gap analysis and delivery roadmap</li>
-                <li>Moved Smart Label from EVT1 to EVT2 by consolidating battery, power, and RF conclusions</li>
+                <li>Drove build vs buy for LoRaWAN OTA, selecting external partner</li>
+                <li>Initiated Cyber Resilience Act compliance workstream</li>
+                <li>Consolidated battery, power, and RF conclusions for Smart Label</li>
               </ul>
             </div>
-            
             <div class="card-section">
-              <div class="card-label">Outcomes</div>
+              <div class="card-label">Results</div>
               <ul>
-                <li>Designed architecture to scale fleet to <span class="metric">1M devices</span></li>
-                <li>Transformed knowledge silos into cross functional team of V shaped professionals</li>
-                <li>Improved delivery predictability through Jira hygiene, estimation practices, and quality gates</li>
+                <li>Architecture validated for <span class="metric">1M+ device scale</span></li>
+                <li>Transformed silos into cross-functional V-shaped team</li>
+                <li>Improved delivery predictability via Jira hygiene and quality gates</li>
               </ul>
-            </div>
-
-            <div class="kws">
-              <span class="kw">OTA</span><span class="kw">Fleet Management</span><span class="kw">LoRaWAN</span>
-              <span class="kw">Team Leadership</span><span class="kw">CRA Compliance</span><span class="kw">Architecture</span>
             </div>
           </div>
+          <div class="kws">
+            <span class="kw">OTA</span><span class="kw">Fleet Management</span><span class="kw">LoRaWAN</span>
+            <span class="kw">Team Leadership</span><span class="kw">CRA Compliance</span><span class="kw">Architecture</span>
+          </div>
+        </div>
 
-          <div class="card">
-            <h3>Lead Software Engineer, ESP32 Product Launch</h3>
-            <div class="meta">
-              <a href="https://essensys.tech/" target="_blank" rel="noopener">Essensys plc ↗</a>
-              <span>Access Control IoT</span>
-              <span>2021 to 2025</span>
-            </div>
-            <div class="card-img-grid">
-              <img src="assets/essensys_hub.png" alt="Essensys Elumo hub dashboard">
-              <img src="assets/essensys_reader.jpg" alt="Essensys Elumo reader unit">
-              <img src="assets/essensys_phone.jpg" alt="Essensys Elumo phone eWallet usage">
-            </div>
-            
+        <div class="card">
+          <div class="card-img-grid">
+            <img src="assets/essensys_hub.png" alt="Essensys Elumo hub dashboard">
+            <img src="assets/essensys_reader.jpg" alt="Essensys Elumo reader unit">
+            <img src="assets/essensys_phone.jpg" alt="Essensys Elumo phone eWallet usage">
+          </div>
+          <div class="meta">
+            <a href="https://essensys.tech/" target="_blank" rel="noopener">Essensys plc ↗</a>
+            <span>Access Control IoT</span>
+            <span>2021 to 2025</span>
+          </div>
+          <h3>Lead Software Engineer, Zero to market Low Latency Access Control Product</h3>
+          <div class="card-section outcomes">
+            <div class="card-label">Outcomes</div>
+            <ul>
+              <li>Achieved <strong>heavily automated SDLC</strong> with minimal to no manual QA and engineering time</li>
+              <li>Achieved <strong>&lt;500 ms</strong> roundtrip card access resolution (Reader → Hub → AWS IoT → Lambda → DynamoDB → Reader)</li>
+              <li>Shipped ESP32 WROOM E and ESP32 C3 products to production</li>
+              <li>Moved CI system to cloud for all R&D</li>
+              <li>Created technical roadmap aligned to product needs</li>
+            </ul>
+          </div>
+          <button class="card-toggle" onclick="toggleCard(this)">Show Details</button>
+          <div class="card-details" style="display:none">
             <div class="card-section">
-              <div class="card-label">Problem</div>
-              <p style="margin:0;font-size:14px">Needed to bring an innovative ESP32 based access control product from idea to market with scalable architecture and CI/CD for embedded.</p>
+              <div class="card-label">Context</div>
+              <p style="margin:0;font-size:14px">Innovative ESP32-based access control product needed to go from idea to market with scalable architecture and embedded CI/CD.</p>
             </div>
-            
             <div class="card-section">
-              <div class="card-label">My Role</div>
+              <div class="card-label">Constraints</div>
+              <p style="margin:0;font-size:14px">Tight time-to-market, multi-chip support (WROOM E, C3), global AWS deployment, and zero-touch provisioning requirement.</p>
+            </div>
+            <div class="card-section">
+              <div class="card-label">My Ownership</div>
               <ul>
-                <li>Led <span class="metric">6 person</span> Firmware and IoT team, including hiring and onboarding top talent</li>
-                <li>Architected modern, scalable, modular, cross platform firmware based on design patterns</li>
-                <li>Designed AWS global IoT solution adhering to the Well Architected Framework</li>
+                <li>Led <span class="metric">6-person</span> Firmware and IoT team</li>
+                <li>Architected modular, cross-platform firmware</li>
+                <li>Designed AWS global IoT solution</li>
+                <li>Developed ATE (Automated Test Equipment) for post-production tests in the factory</li>
               </ul>
             </div>
-            
             <div class="card-section">
               <div class="card-label">Key Decisions</div>
               <ul>
-                <li>Built CI/CD solution for embedded with HIL testing and auto deployment</li>
-                <li>Established off chip development on x86 using TDD with Unity framework</li>
-                <li>Introduced BDD Python framework for hardware interaction testing</li>
+                <li>Built CI/CD with HIL testing and auto deployment</li>
+                <li>Established off-chip TDD with Unity framework</li>
+                <li>Introduced BDD Python framework for hardware testing</li>
               </ul>
             </div>
-            
             <div class="card-section">
-              <div class="card-label">Outcomes</div>
+              <div class="card-label">Results</div>
               <ul>
-                <li>Shipped ESP32 WROOM E and ESP32 C3 products from prototype to production</li>
-                <li>Moved CI system to cloud across entire R&D department, reducing distractions</li>
-                <li>Created technical roadmap aligned to customer and product manager needs</li>
+                <li>Shipped ESP32 WROOM E and C3 products to production</li>
+                <li>Moved CI system to cloud for all R&D</li>
+                <li>Created technical roadmap aligned to product needs</li>
               </ul>
-            </div>
-
-            <div class="kws">
-              <span class="kw">ESP32</span><span class="kw">Embedded C/C++</span><span class="kw">AWS IoT</span>
-              <span class="kw">CI/CD</span><span class="kw">HIL</span><span class="kw">TDD</span><span class="kw">Node.js</span>
             </div>
           </div>
+          <div class="kws">
+            <span class="kw">ESP32</span><span class="kw">Embedded C/C++</span><span class="kw">AWS IoT Core</span>
+            <span class="kw">CI/CD</span><span class="kw">HIL</span><span class="kw">TDD</span><span class="kw">Node.js</span>
+          </div>
+        </div>
 
-          <div class="card">
-            <h3>10 Year Battery Life Smart Thermostat</h3>
-            <div class="meta">
-              <a href="https://switchee.com/" target="_blank" rel="noopener">Switchee Ltd ↗</a>
-              <span>STM32 Low Power</span>
-              <span>2019 to 2021</span>
-            </div>
-            <div class="card-img-grid">
-              <img src="assets/switchee_head.jpg" alt="Switchee thermostat head">
-              <img src="assets/switchee_hub.jpg" alt="Switchee hub installation">
-            </div>
-            
+        <div class="card">
+          <div class="card-img-grid">
+            <img src="assets/switchee_head.jpg" alt="Switchee thermostat head">
+            <img src="assets/switchee_hub.jpg" alt="Switchee hub installation">
+          </div>
+          <div class="meta">
+            <a href="https://switchee.com/" target="_blank" rel="noopener">Switchee Ltd ↗</a>
+            <span>STM32 Low Power</span>
+            <span>2019 to 2021</span>
+          </div>
+          <h3>10-Year Battery Life Smart Thermostat</h3>
+          <div class="card-section outcomes">
+            <div class="card-label">Outcomes</div>
+            <ul>
+              <li><span class="metric">10-year battery life</span> achieved</li>
+              <li>Unified codebase improved efficiency</li>
+              <li>Delivered OTA solution for time-to-market</li>
+            </ul>
+          </div>
+          <button class="card-toggle" onclick="toggleCard(this)">Show Details</button>
+          <div class="card-details" style="display:none">
             <div class="card-section">
-              <div class="card-label">Problem</div>
+              <div class="card-label">Context</div>
               <p style="margin:0;font-size:14px">Social housing providers needed a smart thermostat that could run for 10 years on battery with Sub GHz communication and e-paper display.</p>
             </div>
-            
             <div class="card-section">
-              <div class="card-label">My Role</div>
+              <div class="card-label">Constraints</div>
+              <p style="margin:0;font-size:14px">Extreme power budget (&lt;10µA average), unreliable connectivity in social housing, cost-sensitive BOM for volume production.</p>
+            </div>
+            <div class="card-section">
+              <div class="card-label">My Ownership</div>
               <ul>
-                <li>Took ownership of next gen thermostat development on ARM Cortex based STM32</li>
+                <li>Took ownership of next-gen thermostat development on STM32</li>
+                <li>Optimized LVGL library for ePaper and ULP design; rewrote STM vendor SPI drivers for speed</li>
+                <li>Achieved excellent user experience: instant button response, fast wake from low power to screen change</li>
                 <li>Architected low power application in Embedded C with FreeRTOS</li>
-                <li>Designed MVP patterned UI framework for e-paper display</li>
+                <li>Designed MVP-patterned UI framework for e-paper display</li>
               </ul>
             </div>
-            
             <div class="card-section">
               <div class="card-label">Key Decisions</div>
               <ul>
-                <li>Integrated Sub GHz communication with Gateway device for reliable connectivity</li>
-                <li>Ported AWS OTA Agent library and proposed fleet provisioning solution</li>
+                <li>Integrated Sub GHz communication with Gateway device</li>
+                <li>Ported AWS OTA Agent library and proposed fleet provisioning</li>
                 <li>Designed regression test framework using Salt, Docker, Python, Raspberry Pi</li>
               </ul>
             </div>
-            
             <div class="card-section">
-              <div class="card-label">Outcomes</div>
+              <div class="card-label">Results</div>
               <ul>
-                <li>Achieved <span class="metric">10 year battery life</span> for power constrained system</li>
-                <li>Created unified codebase improving efficiency across projects</li>
-                <li>Delivered OTA solution focused on time to market efficiency</li>
+                <li><span class="metric">10-year battery life</span> achieved</li>
+                <li>Unified codebase improved efficiency across projects</li>
+                <li>Delivered OTA solution for time-to-market</li>
               </ul>
-            </div>
-
-            <div class="kws">
-              <span class="kw">STM32</span><span class="kw">FreeRTOS</span><span class="kw">Low Power</span>
-              <span class="kw">AWS OTA</span><span class="kw">Sub GHz</span><span class="kw">E-paper</span>
             </div>
           </div>
+          <div class="kws">
+            <span class="kw">STM32</span><span class="kw">FreeRTOS</span><span class="kw">Low Power</span>
+            <span class="kw">AWS OTA</span><span class="kw">Sub GHz</span><span class="kw">E-paper</span>
+          </div>
+        </div>
 
-          <div class="card">
-            <h3>Automated Hydroponic Garden Startup</h3>
-            <div class="meta">
-              <a href="https://www.seedrs.com/gartenzwerg" target="_blank" rel="noopener">Gartenzwerg Technologies ↗</a>
-              <span>ESP32 to AWS IoT</span>
-              <span>2017 to 2019</span>
-            </div>
-            <div class="card-img-grid">
-              <img src="assets/gartenzwerg.jpg" alt="Gartenzwerg automated hydroponic garden">
-              <img src="assets/gartenzwerg_phone.png" alt="Gartenzwerg phone app">
-            </div>
-            
+        <div class="card">
+          <div class="card-img-grid">
+            <img src="assets/gartenzwerg.jpg" alt="Gartenzwerg automated hydroponic garden">
+            <img src="assets/gartenzwerg_phone.png" alt="Gartenzwerg phone app">
+          </div>
+          <div class="meta">
+            <a href="https://www.seedrs.com/gartenzwerg" target="_blank" rel="noopener">Gartenzwerg Technologies ↗</a>
+            <span>ESP32 to AWS IoT Core</span>
+            <span>2017 to 2019</span>
+          </div>
+          <h3>Automated Hydroponic Garden Startup</h3>
+          <div class="card-section outcomes">
+            <div class="card-label">Outcomes</div>
+            <ul>
+              <li><span class="metric">90% cost reduction</span> in water level sensing approach</li>
+              <li>Demonstrated product at exhibitions and investor presentations</li>
+              <li>Delivered end-to-end IoT solution from firmware to cloud</li>
+            </ul>
+          </div>
+          <button class="card-toggle" onclick="toggleCard(this)">Show Details</button>
+          <div class="card-details" style="display:none">
             <div class="card-section">
-              <div class="card-label">Problem</div>
-              <p style="margin:0;font-size:14px">Indoor hydroponic garden needed reliable cloud connected firmware with cost effective sensing for mass production.</p>
+              <div class="card-label">Context</div>
+              <p style="margin:0;font-size:14px">Indoor hydroponic garden needed reliable cloud-connected firmware with cost-effective sensing for mass production.</p>
             </div>
-            
             <div class="card-section">
-              <div class="card-label">My Role</div>
+              <div class="card-label">Constraints</div>
+              <p style="margin:0;font-size:14px">Startup budget, aggressive unit cost target, need for remote sensor evaluation, and rapid iteration cycles.</p>
+            </div>
+            <div class="card-section">
+              <div class="card-label">My Ownership</div>
               <ul>
-                <li>Took ownership of entire IoT firmware development for ESP32 in C connected to AWS IoT Core</li>
-                <li>Collaborated with mobile app developer and biologist to integrate cloud logic and biological concepts</li>
-                <li>Managed project timelines, engaged with electronics manufacturers, and implemented Scrumban</li>
+                <li>Owned entire IoT firmware development for ESP32 connected to AWS IoT Core</li>
+                <li>Collaborated with mobile app developer and biologist for cloud logic</li>
+                <li>Managed project timelines and engaged with electronics manufacturers</li>
               </ul>
             </div>
-            
             <div class="card-section">
               <div class="card-label">Key Decisions</div>
               <ul>
-                <li>Engineered cost effective pH and water level measuring technique</li>
-                <li>Evaluated sensors and actuators from cloud with data analysis in AWS QuickSight</li>
+                <li>Engineered cost-effective pH and water level measuring technique</li>
+                <li>Evaluated sensors and actuators from cloud with AWS QuickSight</li>
                 <li>Designed interlockable plastic modules to optimize shipment space</li>
               </ul>
             </div>
-            
             <div class="card-section">
-              <div class="card-label">Outcomes</div>
+              <div class="card-label">Results</div>
               <ul>
-                <li>Reduced sensor costs by <span class="metric">90%</span> through innovative measuring technique</li>
+                <li><span class="metric">90% cost reduction</span> in sensing approach</li>
                 <li>Demonstrated product at exhibitions and investor presentations</li>
-                <li>Delivered end to end IoT solution from firmware to cloud infrastructure</li>
+                <li>Delivered end-to-end IoT solution from firmware to cloud</li>
               </ul>
             </div>
+          </div>
+          <div class="kws">
+            <span class="kw">ESP32</span><span class="kw">AWS IoT Core</span><span class="kw">Cost Optimization</span>
+            <span class="kw">Startup</span><span class="kw">Full Stack IoT</span><span class="kw">Scrumban</span>
+          </div>
+        </div>
 
-            <div class="kws">
-              <span class="kw">ESP32</span><span class="kw">AWS IoT Core</span><span class="kw">Cost Optimization</span>
-              <span class="kw">Startup</span><span class="kw">Full Stack IoT</span><span class="kw">Scrumban</span>
+        <div class="card">
+          <div class="meta">
+            <a href="https://netvisor.hu/en/services/industry-4-0-and-rd/" target="_blank" rel="noopener">Netvisor Ltd ↗</a>
+            <span>Industry 4.0</span>
+            <span>2016 to 2017</span>
+          </div>
+          <h3>Industry 4.0 Fault Monitor &amp; IoT Gateway</h3>
+          <div class="card-section outcomes">
+            <div class="card-label">Outcomes</div>
+            <ul>
+              <li>Built IoT Gateway on <strong>Embedded Linux</strong> for industrial connectivity</li>
+              <li>Reduced factory downtime with real-time fault monitoring</li>
+              <li>Integrated multiple PLC protocols into unified cloud pipeline</li>
+            </ul>
+          </div>
+          <button class="card-toggle" onclick="toggleCard(this)">Show Details</button>
+          <div class="card-details" style="display:none">
+            <div class="card-section">
+              <div class="card-label">Context</div>
+              <p style="margin:0;font-size:14px">GE Water and government infrastructure clients needed real-time fault monitoring and IoT connectivity for industrial equipment.</p>
+            </div>
+            <div class="card-section">
+              <div class="card-label">Constraints</div>
+              <p style="margin:0;font-size:14px">Legacy PLC equipment, multiple protocol standards, resource-constrained embedded targets, high reliability requirements.</p>
+            </div>
+            <div class="card-section">
+              <div class="card-label">My Ownership</div>
+              <ul>
+                <li>Developed IoT Gateway service in <strong>C++ on Ubuntu Core and Yocto Linux</strong></li>
+                <li>Built <a href="https://netvisor.hu/en/services/fault-manager-fault-and-alarm-monitoring/" target="_blank" rel="noopener">Fault Manager</a> Java application for factory alarm monitoring</li>
+                <li>Implemented cloud APIs in Node.js and Python</li>
+              </ul>
+            </div>
+            <div class="card-section">
+              <div class="card-label">Key Decisions</div>
+              <ul>
+                <li>Integrated <strong>CIP, Modbus, Snap7</strong> protocols for <strong>Allen Bradley and Siemens PLCs</strong></li>
+                <li>Implemented LWM2M connection in Java for device management</li>
+                <li>Chose Ubuntu Core and Yocto for long-term embedded Linux support</li>
+              </ul>
+            </div>
+            <div class="card-section">
+              <div class="card-label">Results</div>
+              <ul>
+                <li>Significant reduction in factory downtime through proactive fault detection</li>
+                <li>Unified gateway supporting multiple industrial protocols</li>
+                <li>Scalable cloud integration for fleet monitoring</li>
+              </ul>
             </div>
           </div>
-
-        </div>
-      </section>
-
-    </section>
-
-    <section style="margin-top:24px">
-      <h2>Skills</h2>
-      <div class="twoCol">
-        <div class="bucket">
-          <h3>Languages</h3>
-          <p>Embedded C/C++, Python, Bash, Node.js</p>
-        </div>
-        <div class="bucket">
-          <h3>Embedded</h3>
-          <p>Bare metal, FreeRTOS, CMake, Make, device drivers, low power design</p>
-        </div>
-        <div class="bucket">
-          <h3>MCUs and Platforms</h3>
-          <p>ESP32, STM32, ARM Cortex M</p>
-        </div>
-        <div class="bucket">
-          <h3>Connectivity</h3>
-          <p>LoRaWAN, BLE, MQTT, Wi-Fi, Ethernet, OSDP, EnOcean, Sub GHz</p>
-        </div>
-        <div class="bucket">
-          <h3>Cloud and Fleet</h3>
-          <p>AWS IoT Core, Device Defender, IAM, S3, Serverless, OTA strategy, fleet rollouts</p>
-        </div>
-        <div class="bucket">
-          <h3>Testing and Tooling</h3>
-          <p>GitLab CI/CD, Docker, HIL, SIL, TDD, BDD, Python automation, Jira</p>
-        </div>
-        <div class="bucket">
-          <h3>Interfaces</h3>
-          <p>I2C, SPI, QSPI, UART, RS485, RS232, RMII, 1 Wire</p>
-        </div>
-        <div class="bucket">
-          <h3>Leadership</h3>
-          <p>Team building, hiring, mentoring, stakeholder alignment, cross functional delivery</p>
+          <div class="kws">
+            <span class="kw">Embedded Linux</span><span class="kw">Yocto</span><span class="kw">Ubuntu Core</span>
+            <span class="kw">C++</span><span class="kw">PLC</span><span class="kw">Modbus</span>
+            <span class="kw">Industry 4.0</span><span class="kw">Java</span>
+          </div>
         </div>
       </div>
     </section>
-    </div>
+
+    <script>
+      function toggleCard(btn) {
+        var details = btn.nextElementSibling;
+        if (details.style.display === "none") {
+          details.style.display = "block";
+          btn.textContent = "Hide Details";
+        } else {
+          details.style.display = "none";
+          btn.textContent = "Show Details";
+        }
+      }
+    </script>
+
+    <section style="margin-top:24px">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <div class="skill-row"><span class="skill-label">Languages</span><span class="skill-value">Embedded C/C++, Python, Bash, Node.js</span></div>
+        <div class="skill-row"><span class="skill-label">Embedded</span><span class="skill-value">Bare metal, FreeRTOS, CMake, device drivers, ULP design</span></div>
+        <div class="skill-row"><span class="skill-label">Linux</span><span class="skill-value">Yocto, Ubuntu Core, Alpine/Ubuntu Dev and CI Containers</span></div>
+        <div class="skill-row"><span class="skill-label">MCUs &amp; Platforms</span><span class="skill-value">ESP32, STM32, ARM Cortex-M</span></div>
+        <div class="skill-row"><span class="skill-label">Connectivity</span><span class="skill-value">LoRaWAN, BLE, MQTT, Wi-Fi, LTE, Ethernet, OSDP, EnOcean, Sub GHz</span></div>
+        <div class="skill-row"><span class="skill-label">Cloud &amp; Fleet</span><span class="skill-value">AWS IoT Core, Lambda, DynamoDB, Athena, QuickSight, Device Defender, IAM, S3, Serverless Framework, OTA strategy, fleet rollouts</span></div>
+        <div class="skill-row"><span class="skill-label">Testing &amp; Tooling</span><span class="skill-value">GitLab CI/CD, Docker, HIL, SIL, TDD, BDD, Python automation</span></div>
+        <div class="skill-row"><span class="skill-label">Interfaces</span><span class="skill-value">I2C, SPI, QSPI, UART, RS485, RS232, RMII, 1-Wire, CIP, Snap7</span></div>
+        <div class="skill-row"><span class="skill-label">Leadership</span><span class="skill-value">Team building, hiring, mentoring, stakeholder alignment, cross-functional delivery</span></div>
+      </div>
+      <style>
+        .skills-list { display: flex; flex-direction: column; gap: 8px; }
+        .skill-row { display: flex; gap: 16px; align-items: baseline; padding: 6px 0; border-bottom: 1px solid rgba(35,48,79,.5); }
+        .skill-label { min-width: 140px; font-size: 13px; font-weight: 600; color: var(--accent2); flex-shrink: 0; }
+        .skill-value { font-size: 14px; color: var(--muted); line-height: 1.5; }
+        @media (max-width: 600px) { .skill-row { flex-direction: column; gap: 4px; } .skill-label { min-width: auto; } }
+      </style>
+    </section>
 
     <section style="margin-top:20px">
       <h2>Contact</h2>
@@ -554,8 +787,34 @@
       </div>
     </section>
 
+    <section style="margin-top:24px">
+      <h2>Architecture at a Glance</h2>
+      <div class="arch-diagram">
+        <div class="arch-row">
+          <div class="arch-box device">📟 Device<span>ESP32 / STM32<br>FreeRTOS · Drivers · Sensors</span></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-box conn">📡 Connectivity<span>LoRaWAN · BLE · Wi-Fi<br>MQTT · TCP/IP</span></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-box cloud">☁️ AWS IoT Core<span>Device Shadow · Rules<br>Fleet Provisioning</span></div>
+        </div>
+        <div class="arch-row">
+          <div class="arch-box services">⚙️ Services<span>Lambda · DynamoDB · S3<br>Timestream · Grafana</span></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-box ops">🚀 Fleet Ops<span>OTA Rollouts · Staging<br>Monitoring · Rollback</span></div>
+        </div>
+      </div>
+      <style>
+        .arch-diagram { display: flex; flex-direction: column; gap: 18px; margin-top: 16px; }
+        .arch-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: center; }
+        .arch-box { background: var(--panel2); border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px; text-align: center; min-width: 140px; font-size: 15px; font-weight: 600; color: var(--accent2); }
+        .arch-box span { display: block; font-size: 12px; color: var(--muted); font-weight: 400; margin-top: 6px; line-height: 1.4; }
+        .arch-arrow { font-size: 22px; color: var(--accent); }
+        @media (max-width: 700px) { .arch-row { flex-direction: column; } .arch-arrow { transform: rotate(90deg); } }
+      </style>
+    </section>
+
     <footer>
-      <div>© <span id="y"></span> Laszlo Pataki</div>
+      <div>© <span id="y"></span> Laszlo Pataki <a href="assets/Laszlo_Pataki_CV.pdf" style="color:var(--accent2)">Download CV</a></div>
     </footer>
   </div>
 
