@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Laszlo Pataki CV Master</title>
+  <style>
+    @page { size: A4; margin: 0; }
+    :root {
+      --paper-w: 210mm;
+      --paper-h: 297mm;
+      --ink: #111;
+      --line: #444;
+      --blue: #2b66d4;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #e9e9e9;
+      color: var(--ink);
+      font-family: Calibri, "Segoe UI", Arial, sans-serif;
+      line-height: 1.25;
+    }
+    a { color: #1d5db6; text-decoration: underline; }
+    .page {
+      width: var(--paper-w);
+      min-height: var(--paper-h);
+      margin: 0 auto 5mm;
+      background: #fff;
+      padding: 5mm 5mm 5mm;
+      break-after: page;
+      page-break-after: always;
+    }
+    .page:last-child { break-after: auto; page-break-after: auto; }
+    .top {
+      display: grid;
+      grid-template-columns: 70mm 1fr 70mm;
+      gap: 4mm;
+      align-items: start;
+    }
+    .badge {
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 2mm;
+    }
+    .aws-badge { height: 20mm; width: auto; display: block; }
+    .top > .identity {
+      text-align: center;
+      margin-top: 0.5mm;
+    }
+    .name { font-size: 16pt; font-weight: 700; }
+    .title { font-size: 12pt; }
+    .location { font-size: 9pt; }
+    .contact {
+      font-size: 8pt;
+      line-height: 1.35;
+      margin-top: 0.5mm;
+      display: grid;
+      row-gap: 0.6mm;
+    }
+    .contact-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      column-gap: 1.2mm;
+      align-items: baseline;
+    }
+    .contact-text { text-align: right; white-space: nowrap; }
+    .contact-icon { width: 1.2em; text-align: center; }
+    .contact-row.phone .contact-icon { transform: translateY(-0.02em); }
+    .contact-row.phone .contact-text { letter-spacing: 0.02em; }
+    .contact a { display: inline-block; max-width: 100%; }
+    .contact a.contact-text { overflow-wrap: normal; }
+    
+    .statement-box {
+      border: 0.5pt solid var(--line);
+      margin-top: 4mm;
+      padding: 1.6mm 2mm 1.8mm;
+    }
+    .section-head { font-weight: 700; font-size: 11pt; margin-bottom: 1.1mm; }
+    .statement-text { font-size: 9.75pt; line-height: 1.28; }
+    .page1-grid {
+      display: grid;
+      grid-template-columns: 55mm 1fr;
+      gap: 3mm;
+      margin-top: 3mm;
+      align-items: start;
+    }
+    .left-box {
+      border: none;
+      margin-bottom: 1.2mm;
+    }
+    .technical-skills ul { font-size: 9pt; }
+    .left-box .head {
+      text-align: center;
+      font-weight: 700;
+      font-size: 11pt;
+      border-bottom: 0.5pt solid var(--line);
+      padding: 0.5mm 1mm;
+    }
+    .left-box .body {
+      border-left: 0.5pt solid var(--line);
+      border-right: 0.5pt solid var(--line);
+      border-bottom: 0.5pt solid var(--line);
+      padding: 0.8mm 1.2mm 1mm;
+      font-size: 9pt;
+    }
+    .left-box ul { margin: 0; padding-left: 4.4mm; }
+    .left-box li { margin: 0.35mm 0; }
+    .left-box.technical-skills ul { list-style: none; padding-left: 0; }
+    .left-box.technical-skills li { margin: 0.35mm 0; line-height: 1.24; }
+    .left-box.technical-skills li + li { margin-top: 0.45mm; }
+    .left-box.technical-skills .lang-line { font-size: 9pt; white-space: nowrap; }
+    .left-box p { margin: 0.8mm 0; }
+    .left-box.education-box .body { line-height: 1.28; }
+    .left-box.education-box .body { font-size: 8pt; }
+    .left-box.personal-skills-box .body { font-size: 8pt; }
+    .left-box.personal-skills-box .body { padding-top: 0.4mm; padding-bottom: 0.5mm; padding-left: 1mm; padding-right: 1mm; }
+    .left-box.personal-skills-box ul { padding-left: 3.2mm; }
+    .left-box.personal-skills-box li { margin: 0.1mm 0; line-height: 1.12; }
+    .left-box.education-box .body { padding-top: 0.6mm; padding-bottom: 0.8mm; padding-left: 1mm; padding-right: 1mm; }
+    .left-box.education-box .edu-section { margin: 0 0 1.4mm 0; }
+    .left-box.education-box .edu-title { font-weight: 700; margin-bottom: 0.4mm; }
+    .left-box.education-box .edu-lines div { margin: 0.15mm 0; }
+    .left-box.education-box ul { margin: 0; padding-left: 3.2mm; list-style: disc; }
+    .left-box.education-box li { margin: 0.18mm 0; line-height: 1.18; }
+    .work-head { text-align: center; font-size: 12pt; font-weight: 700; margin-bottom: 1.5mm; }
+    .job-title-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3mm;
+      align-items: end;
+    }
+    .job-title { font-weight: 700; font-size: 11.3pt; }
+    .job-date { font-weight: 700; font-size: 10.5pt; }
+    .company-line { font-style: italic; font-size: 9.2pt; margin-top: 0.5mm; }
+    .summary-line { font-size: 9.7pt; margin-top: 1.6mm; line-height: 1.28; }
+    .subhead { font-size: 10pt; margin-top: 3mm; margin-bottom: 0.8mm; }
+    .main ul { margin: 0; padding-left: 5mm; font-size: 9.5pt; }
+    .main li { margin: 0.6mm 0; line-height: 1.28; }
+    .page-linear { padding-top: 10mm; }
+    .job-block { margin-bottom: 8mm; }
+    .job-block .job-title-row { margin-bottom: 0.6mm; }
+    .job-block .company-line { margin-bottom: 1.4mm; }
+    .job-block .intro { font-size: 9.8pt; line-height: 1.28; margin-bottom: 1.8mm; }
+    .job-block .subhead { margin-top: 2.8mm; }
+    .job-block ul { margin: 0; padding-left: 5mm; font-size: 9.7pt; }
+    .job-block li { margin: 0.7mm 0; line-height: 1.3; }
+    .small-heading { font-weight: 700; font-size: 10pt; margin-top: 2mm; margin-bottom: 1mm; }
+    .paragraph { font-size: 9.7pt; line-height: 1.35; }
+    @media print {
+      body { background: #fff; }
+      .page { margin: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="top">
+      <div class="badge">
+        <svg class="aws-badge" viewBox="0 0 240 170" role="img" aria-label="AWS Certified Solutions Architect Associate badge">
+          <rect x="8" y="8" width="224" height="154" rx="14" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+          <rect x="8" y="8" width="224" height="42" rx="14" fill="#111827"/>
+          <text x="120" y="35" text-anchor="middle" fill="#f59e0b" font-size="24" font-family="Calibri, Arial, sans-serif" font-weight="700">AWS CERTIFIED</text>
+          <text x="120" y="78" text-anchor="middle" fill="#111827" font-size="19" font-family="Calibri, Arial, sans-serif" font-weight="700">Solutions Architect</text>
+          <text x="120" y="104" text-anchor="middle" fill="#111827" font-size="19" font-family="Calibri, Arial, sans-serif" font-weight="700">Associate</text>
+          <line x1="34" y1="116" x2="206" y2="116" stroke="#d1d5db" stroke-width="2"/>
+          <text x="120" y="142" text-anchor="middle" fill="#059669" font-size="15" font-family="Calibri, Arial, sans-serif" font-weight="700">CERTIFIED</text>
+        </svg>
+      </div>
+      <div class="identity">
+        <div class="name">Laszlo Pataki</div>
+        <div class="title">IoT Engineering Lead</div>
+        <div class="location">London – Open to relocate <span style="white-space: nowrap;">UK &amp; EU Citizen</span></div>
+      </div>
+      <div class="contact">
+        <div class="contact-row">
+          <a class="contact-text" href="mailto:laszlo_pataki@outlook.com">laszlo_pataki@outlook.com</a>
+          <span class="contact-icon">&#9993;</span>
+        </div>
+        <div class="contact-row">
+          <a class="contact-text" href="http://www.linkedin.com/in/laszlo-pataki" target="_blank" rel="noopener noreferrer">http://www.linkedin.com/in/laszlo-pataki</a>
+          <span class="contact-icon">&#128279;</span>
+        </div>
+        <div class="contact-row">
+          <a class="contact-text" href="https://laszlopataki.github.io/portfolio" target="_blank" rel="noopener noreferrer">https://laszlopataki.github.io/portfolio</a>
+          <span class="contact-icon">&#128187;</span>
+        </div>
+        <div class="contact-row phone">
+          <span class="contact-text">+447380830076</span>
+          <span class="contact-icon">&#9742;</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="statement-box">
+      <div class="section-head">Personal Statement</div>
+      <div class="statement-text">Technical IoT leader who ships reliable connected products at scale. I combine hands on engineering judgment with team leadership across firmware, hardware, cloud, test, and industrialization. I am looking for roles where I can lead a small team, stay close to the technology, and build outcomes that matter and bring positive change to the world.</div>
+    </div>
+
+    <div class="page1-grid">
+      <div>
+        <div class="left-box technical-skills">
+          <div class="head">Technical Skills</div>
+          <div class="body">
+            <ul>
+              <li class="lang-line"><b>Languages:</b> C/C++, Python, Bash, JS</li>
+              <li><b>Embedded:</b> ARM Cortex M, STM32, ESP32, Bare metal, Drivers, FreeRTOS, CMake</li>
+              <li><b>Interfaces:</b> I2C, SPI, QSPI, UART, RS485, RS232, RMII, 1&#8209;Wire</li>
+              <li><b>Connectivity:</b> LoRaWAN, BLE, MQTT, WiFi, Ethernet, OSDP, EnOcean, CoAP, LwM2M, CIP, Modbus, Snap7</li>
+              <li><b>Cloud:</b> AWS IoT Core, OTA, SNS, SQS, Lambda, DynamoDB, IAM, S3, Device Defender, Serverless Framework, Terraform, Node.js</li>
+              <li><b>Testing and Tooling:</b> Unity, CMock, <span style="white-space: nowrap;">CI/CD (GitLab / TC / Jenkins / GitHub)</span>, Docker (CI, Dev, HIL containers), Wireshark, Jira Advanced Plans, HIL, SIL, Off-Chip Development, SBC runner</li>
+              <li><b>Linux:</b> Raspbian, Alpine, Ubuntu, Ubuntu Core, Yocto</li>
+              <li><b>Hardware bring up and lab tools:</b> Saleae Logic Analyzer, DMM, oscilloscope, Otii power profiler, JTAG/SWD, DFM, DFT, ATE design</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="left-box personal-skills-box">
+          <div class="head">Personal Skills</div>
+          <div class="body">
+            <ul>
+              <li><span style="white-space: nowrap;">Calm, transparent leadership in ambiguity</span></li>
+              <li><span style="white-space: nowrap;">Simplify complex problems into clear plans</span></li>
+              <li>Strong ownership and delivery focus</li>
+              <li>Coaching with accountability</li>
+              <li>Cross functional collaboration</li>
+              <li>Business outcome mindset</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="left-box education-box">
+          <div class="head">Education</div>
+          <div class="body">
+            <div class="edu-section">
+              <div class="edu-title">Continuous Learning</div>
+              <ul>
+                <li>AWS Solutions Architect Professional, Udemy</li>
+                <li>Books: Embedded Software Design, Reusable Firmware Development, Designing the Internet of Things, Design Patterns for Embedded Systems in C</li>
+                <li>Conferences: AWS Summit London, Embedded Online Conference, IoT Online Conference</li>
+              </ul>
+            </div>
+
+            <div class="edu-section">
+              <div class="edu-title">BSc Computer Science Engineering,</div>
+              <div class="edu-lines">
+                <div>Obuda University,</div>
+                <div>John von Neumann Facility of Informatics,</div>
+                <div>Budapest, Sep 2012 to Jun 2017</div>
+              </div>
+              <ul>
+                <li>Thesis, motorcycle anti theft system using MEMS and microwave sensing, GSM and GPRS alerts with GPS, and Bluetooth control via Android, built on ATmega2560 and SIM808</li>
+              </ul>
+            </div>
+
+            <div class="edu-section">
+              <div class="edu-lines">
+                <div>John von Neumann Computer Science Grammar School, Budapest, 2007 to 2012</div>
+              </div>
+              <ul>
+                <li>Advanced finals in English and Informatics, early programming including SQL, Linux shell, HTML, CSS, PHP</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="work-head">Work Experience</div>
+        <div class="job-title-row"><div class="job-title">Deputy Head of IoT, Pharma Cold Chain</div><div class="job-date">March 2025 – March 2026</div></div>
+        <div class="company-line">SkyCell AG - Switzerland, Remote - <a href="https://skycell.ch/">https://skycell.ch/</a></div>
+        <div class="summary-line">Led cross functional IoT R&amp;D delivery across firmware, hardware, cloud, test, and industrialization for pharma cold chain monitoring and design scaling device fleet to 1M devices.</div>
+        <div class="subhead">Leadership and Stakeholder Management</div>
+        <ul>
+          <li>Led a 13 person cross functional, diverse, remote IoT team and aligned priorities across Product, Operations, QA, Supply Chain, and BD to deliver roadmap and customer commitments</li>
+          <li>Built and scaled the team through hiring and onboarding improvements, transforming knowledge silos into a highly cross functional team of V shaped skillset professionals</li>
+          <li>Cultivated a safe, transparent, low hierarchy environment with strong delivery focus, including regular remote team events unique within the organization</li>
+          <li>Mentored engineers with SMART development plans aligned to the company progression framework, covering technical and soft skills with measurable actions and learning material</li>
+          <li>Supported high performers to reach the next level and partnered with low performers to improve motivation, performance, and accountability using the Situation Behavior Impact approach</li>
+          <li>Drove cross functional decision making by aligning technology choices with business requirements, risks, and operational constraints, focusing on business outcomes over technical nice to haves</li>
+          <li>Translated tender and customer requirements into clear technical scope, estimates, and delivery plans and acted as the primary technical interface for Business Development</li>
+        </ul>
+        <div class="subhead">Architecture, Fleet and Reliability</div>
+        <ul>
+          <li>Owned end to end IoT solution architecture from device to connectivity to cloud ingestion to data and operations workflows, with focus on scalability, operability, and maintainability</li>
+          <li>Defined OTA and fleet rollout approach including staging, cohorting, monitoring, and rollback readiness to support large scale deployments</li>
+          <li>Drove logger platform improvements across sensing and motion behaviour, data integrity, connectivity robustness, and power and battery optimization using a measurement, iteration, validation approach</li>
+          <li>Interpreted Cyber Resilience Act requirements and initiated a compliance readiness workstream, including gap analysis and delivery roadmap</li>
+        </ul>
+        <div class="subhead">Programs and Partner Collaboration</div>
+        <ul>
+          <li>Singlehandedly moved Smart Label from EVT1 to EVT2 by consolidating conclusions on battery, power profile, and RF performance, and making key technical and user experience decisions that enabled EVT2 launch readiness for the initial prototype</li>
+          <li>Led the decision to pursue an external LoRa OTA solution by driving a build vs buy discussion, researching scalable options, building partner relationships, and supporting early POC work and initial commercial discussions, resulting in a viable path to a ready to use scalable OTA capability without long term internal maintenance</li>
+          <li>Supported new customer tenders with the pre sales team by creating SOPs, establishing cross team communication channels, and assigning best fit engineers to POC priorities with program managers, resulting in smoother execution and improved customer experience during POCs</li>
+        </ul>
+        <div class="subhead">Delivery and Ways of Working</div>
+        <ul>
+          <li>Improved delivery predictability through stronger Jira hygiene, estimation practices, quality gates, Definition of Done, decision logs, and cross team rituals</li>
+          <li>Built and maintained structured documentation and SOPs to improve traceability, onboarding speed, and cross team alignment</li>
+          <li>Enabled faster tender and POC execution by translating business needs into technical solutions and setting up effective interfaces between BD and engineering</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="page page-linear">
+    <div class="job-block">
+      <div class="job-title-row"><div class="job-title">Lead Software Engineer</div><div class="job-date">June 2021 – March 2025</div></div>
+      <div class="company-line">Essensys plc - London - <a href="https://essensys.tech/">https://essensys.tech/</a></div>
+      <div class="intro">At Essensys, I led a talented 6-member team in bringing an innovative idea to market using ESP32. Received special recognition for replacing dashboard CI feedback with Slack alerts for failed jobs and moving the CI system to the cloud across the entire R&amp;D department, enhancing efficiency and reducing distractions.</div>
+      <div class="subhead">Team Leadership</div>
+      <ul>
+        <li>Spearheaded the recruitment process, identifying and onboarding top talent.</li>
+        <li>Led the “Firmware and IoT” team of 6, organizing and optimizing team functionality.</li>
+        <li>Fostered team spirit, ensuring members are engaged and committed to our common goals.</li>
+        <li>Ensured the career development of team members, providing support for their professional growth.</li>
+      </ul>
+      <div class="subhead">Architectural Design</div>
+      <ul>
+        <li>Architected modern, scalable, modular, cross-platform firmware based on design patterns.</li>
+        <li>Designed an AWS global IoT Solution adhering to the Well-Architected Framework.</li>
+        <li>Developed a CI/CD solution for embedded systems, including HIL testing and auto deployment.</li>
+      </ul>
+      <div class="subhead">Technical Implementation</div>
+      <ul>
+        <li>Extensively worked with ESP32 WROOM E and ESP32 C3 chips for various projects.</li>
+        <li>Designed and implemented end-to-end IoT features with ESP32, Serverless Framework, and Node.js.</li>
+        <li>Implemented Docker containers for project builds, CI Runner, and devcontainers.</li>
+        <li>Introduced a BDD Python framework and wrote various Python tools to interact with hardware.</li>
+        <li>Established off-chip development on x86 architecture based on TDD with Unity tool.</li>
+        <li>Utilized and optimized libraries and resources from third parties for project needs.</li>
+      </ul>
+      <div class="subhead">Strategic Planning and Collaboration</div>
+      <ul>
+        <li>Crafted a technical roadmap based on customer and product manager needs.</li>
+        <li>Organized and streamlined team processes, proactively developing and refining practices.</li>
+        <li>Cultivated relationships with technical partners, actively seeking new collaborations.</li>
+        <li>Facilitated communication and collaboration with other teams through strategic meetings.</li>
+      </ul>
+    </div>
+
+    <div class="job-block">
+      <div class="job-title-row"><div class="job-title">Software Engineer</div><div class="job-date">April 2019 – June 2021</div></div>
+      <div class="company-line">Switchee Ltd - London - <a href="http://www.switchee.co">http://www.switchee.co</a></div>
+      <div class="intro">I took ownership of developing the next-gen smart thermostat, customized for social housing providers.</div>
+      <ul>
+        <li>Led the development on ARM Cortex-based STM32, fostering collaboration with software engineers to create a unified codebase, enhancing efficiency and consistency across projects.</li>
+        <li>Architected a low-power application in embedded C with FreeRTOS, integrating Sub-GHz communication with the Gateway device, and designed an MVP-patterned UI development framework for an e-paper display.</li>
+        <li>Engineered feature-rich firmware, ensuring a 10-year battery life for power-constrained systems.</li>
+        <li>Developed an over-the-air update solution through AWS OTA Agent library porting and proposed a solution for fleet provisioning and management focused on time-to-market efficiency.</li>
+        <li>Designed a comprehensive regression test framework using Salt, Docker, Python, Raspberry Pi, and TeamCity</li>
+      </ul>
+    </div>
+
+    <div class="job-block">
+      <div class="job-title-row"><div class="job-title">IoT Consultant (B2B Contract)</div><div class="job-date">March 2020 – Present</div></div>
+      <div class="company-line">Rapid IoT Ltd – London</div>
+      <div class="intro">As an independent contractor, I closely collaborated with clients to understand their needs and help them achieve their goals. Provide ongoing architectural, business logic, and code review support through a flexible consulting arrangement.</div>
+      <ul>
+        <li>Review business cases and assess integration of new features into existing systems.</li>
+        <li>Deliver expert feedback on cloud-device communication, end-to-end architecture, and code quality.</li>
+        <li>Single-handedly designed and built a prototype of an innovative intercom and smart door product.</li>
+        <li>Designed the PCB in Autodesk and organized the first prototype manufacturing in China.</li>
+        <li>Designed and implemented IoT firmware utilizing ESP32 and AWS FreeRTOS.</li>
+        <li>Developed an AWS IoT solution for fleet provisioning and smart lock functionality.</li>
+        <li>Created an Android application controlling the smart lock over AWS.</li>
+        <li>Provided comprehensive documentation for the end-to-end architecture.</li>
+        <li>Designed and 3D-printed a speaker case for a car audio system using a self-customized 3D printer, both hardware and firmware.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page page-linear">
+    <div class="job-block">
+      <div class="job-title-row"><div class="job-title">Software Engineer</div><div class="job-date">October 2017 – March 2019</div></div>
+      <div class="company-line">Gartenzwerg Technologies Ltd - London - <a href="https://www.seedrs.com/gartenzwerg">https://www.seedrs.com/gartenzwerg</a><br><a href="https://www.indiegogo.com/projects/gartenzwerg-pretty-smart-personal-gardens#/">https://www.indiegogo.com/projects/gartenzwerg-pretty-smart-personal-gardens#/</a></div>
+      <div class="intro">Gartenzwerg is an automated indoor garden based on hydroponics, aimed at making plant growing at home effortless, enjoyable, and successful.</div>
+      <ul>
+        <li>Took ownership of the entire IoT firmware development for ESP32 in C connected to AWS IoT Core.</li>
+        <li>Collaborated with cross-functional teams, including a mobile app developer and a biologist, to integrate cloud-side logic, infrastructure design, and biological concepts into the product.</li>
+        <li>Engineered electronics for mass production, implementing a cost-effective pH and water level measuring technique that reduced expenses by 90%.</li>
+        <li>Evaluated and controlled sensors and actuators from the cloud, conducting data analysis in AWS QuickSight to enhance the product's functionality.</li>
+        <li>Demonstrated the product at exhibitions and investor presentations, showcasing its features and capabilities.</li>
+        <li>Utilized CAD/CAM software for innovative design solutions, including interlockable plastic modules to optimize shipment space and the use of pre-manufactured plant pods to reduce design time and costs.</li>
+        <li>Took on project management responsibilities, overseeing timelines, engaging with electronics manufacturers, implementing Scrumban principles, and prioritizing customer experience to exceed expectations.</li>
+      </ul>
+    </div>
+
+    <div class="job-block">
+      <div class="job-title-row"><div class="job-title">IoT Engineer</div><div class="job-date">February 2015 – September 2017</div></div>
+      <div class="company-line">Netvisor Ltd - Budapest - <a href="http://www.netvisor.hu/en">www.netvisor.hu/en</a></div>
+      <div class="intro">Worked across multiple projects, progressing from backend Java development into industrial IoT integration and embedded Linux gateway development.</div>
+      <ul>
+        <li>Developed a Java application for reporting factory faults for Industrial IoT solution, leading to a significant reduction in downtime.</li>
+        <li>Worked with IIoT devices utilizing CIP, Modbus, and Snap7 interfaces for Allen Bradley and Siemens Programmable Logic Controllers, as well as self-manufactured devices.</li>
+        <li>Evaluated market-available cloud solutions and implemented their APIs in Node.js and Python, ensuring alignment with cost, timing, and project requirements.</li>
+        <li>Implemented LWM2M connection in Java for enhanced communication capabilities.</li>
+        <li>Developed an IoT Gateway service in C++ for Ubuntu Core and Yocto Linux.</li>
+      </ul>
+    </div>
+
+    <div class="small-heading">Additional Professional IT Experience:</div>
+    <div class="paragraph">I began my professional IT career in 2013 as a part-time student employee. Initially hired among 15 students, I was fortunate to be selected for a permanent position based on performance. This early experience was pivotal, helping me develop a strong work ethic and familiarity with professional environments, teamwork dynamics, and IT tools before completing my university studies.</div>
+  </div>
+</body>
+</html>
