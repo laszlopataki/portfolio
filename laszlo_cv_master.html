@@ -27,7 +27,7 @@
       min-height: var(--paper-h);
       margin: 0 auto 5mm;
       background: #fff;
-      padding: 5mm 5mm 5mm;
+      padding: 2.5mm 5mm 4mm;
       break-after: page;
       page-break-after: always;
     }
@@ -82,7 +82,7 @@
       display: grid;
       grid-template-columns: 55mm 1fr;
       gap: 3mm;
-      margin-top: 3mm;
+      margin-top: 2.2mm;
       align-items: start;
     }
     .left-box {
@@ -134,22 +134,36 @@
     .job-date { font-weight: 700; font-size: 10.5pt; }
     .company-line { font-style: italic; font-size: 9.2pt; margin-top: 0.5mm; }
     .summary-line { font-size: 9.7pt; margin-top: 1.6mm; line-height: 1.28; }
-    .subhead { font-size: 10pt; margin-top: 3mm; margin-bottom: 0.8mm; }
+    .subhead { font-size: 10pt; margin-top: 2.6mm; margin-bottom: 0.6mm; }
     .main ul { margin: 0; padding-left: 5mm; font-size: 9.5pt; }
-    .main li { margin: 0.6mm 0; line-height: 1.28; }
-    .page-linear { padding-top: 10mm; }
+    .main li { margin: 0.5mm 0; line-height: 1.27; }
+    .page-linear { padding-top: 2.5mm; }
     .job-block { margin-bottom: 8mm; }
     .job-block .job-title-row { margin-bottom: 0.6mm; }
     .job-block .company-line { margin-bottom: 1.4mm; }
     .job-block .intro { font-size: 9.8pt; line-height: 1.28; margin-bottom: 1.8mm; }
-    .job-block .subhead { margin-top: 2.8mm; }
+    .job-block .subhead { margin-top: 2.6mm; }
     .job-block ul { margin: 0; padding-left: 5mm; font-size: 9.7pt; }
-    .job-block li { margin: 0.7mm 0; line-height: 1.3; }
+    .job-block li { margin: 0.6mm 0; line-height: 1.3; }
     .small-heading { font-weight: 700; font-size: 10pt; margin-top: 2mm; margin-bottom: 1mm; }
     .paragraph { font-size: 9.7pt; line-height: 1.35; }
     @media print {
       body { background: #fff; }
       .page { margin: 0; }
+      /* Chrome can push a tall single grid row to the next page.
+         Use stable print layout for first-page columns. */
+      .page1-grid { display: block; position: relative; }
+      .page1-grid > div:first-child {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 55mm;
+      }
+      .page1-grid > .main { margin-left: 58mm; }
+      .job-block {
+        break-inside: avoid-page;
+        page-break-inside: avoid;
+      }
     }
   </style>
 </head>
@@ -289,15 +303,16 @@
         </ul>
         <div class="subhead">Programs and Partner Collaboration</div>
         <ul>
-          <li>Singlehandedly moved Smart Label from EVT1 to EVT2 by consolidating conclusions on battery, power profile, and RF performance, and making key technical and user experience decisions that enabled EVT2 launch readiness for the initial prototype</li>
-          <li>Led the decision to pursue an external LoRa OTA solution by driving a build vs buy discussion, researching scalable options, building partner relationships, and supporting early POC work and initial commercial discussions, resulting in a viable path to a ready to use scalable OTA capability without long term internal maintenance</li>
-          <li>Supported new customer tenders with the pre sales team by creating SOPs, establishing cross team communication channels, and assigning best fit engineers to POC priorities with program managers, resulting in smoother execution and improved customer experience during POCs</li>
+          <li>Singlehandedly moved Smart Label from EVT1 to EVT2 by consolidating battery, power profile, and RF findings, then making key technical and UX decisions that enabled EVT2 launch readiness for the initial prototype</li>
+          <li>Led the decision to adopt an external LoRa OTA solution through a build vs buy assessment, partner scouting, and early POC and commercial work, creating a ready to use scalable OTA path without long term internal maintenance</li>
+          <li>Supported new customer tenders with the pre sales team by creating SOPs, setting cross team communication channels, and assigning best fit engineers to POC priorities with program managers, improving execution and customer experience during POCs</li>
         </ul>
         <div class="subhead">Delivery and Ways of Working</div>
         <ul>
           <li>Improved delivery predictability through stronger Jira hygiene, estimation practices, quality gates, Definition of Done, decision logs, and cross team rituals</li>
           <li>Built and maintained structured documentation and SOPs to improve traceability, onboarding speed, and cross team alignment</li>
           <li>Enabled faster tender and POC execution by translating business needs into technical solutions and setting up effective interfaces between BD and engineering</li>
+          <li>Created a single cross-team test case source of truth usable by Operations, Development, and QA, reducing duplicate suites and enabling better QA automation support for operational teams</li>
         </ul>
       </div>
     </div>
@@ -307,7 +322,7 @@
     <div class="job-block">
       <div class="job-title-row"><div class="job-title">Lead Software Engineer</div><div class="job-date">June 2021 – March 2025</div></div>
       <div class="company-line">Essensys plc - London - <a href="https://essensys.tech/">https://essensys.tech/</a></div>
-      <div class="intro">At Essensys, I led a talented 6-member team in bringing an innovative idea to market using ESP32. Received special recognition for replacing dashboard CI feedback with Slack alerts for failed jobs and moving the CI system to the cloud across the entire R&amp;D department, enhancing efficiency and reducing distractions.</div>
+      <div class="intro">At Essensys, I led a talented 6-member team in bringing an innovative idea to market using ESP32. Received special recognition for eliminating time-wasting dashboard CI monitoring with Slack alerts, moving CI to managed GitLab across R&amp;D, and steering the transition from Java Selenium to a Jest + Supertest approach that full stack engineers could own.</div>
       <div class="subhead">Team Leadership</div>
       <ul>
         <li>Spearheaded the recruitment process, identifying and onboarding top talent.</li>
@@ -330,6 +345,12 @@
         <li>Established off-chip development on x86 architecture based on TDD with Unity tool.</li>
         <li>Utilized and optimized libraries and resources from third parties for project needs.</li>
       </ul>
+      <div class="subhead">Quality and CI</div>
+      <ul>
+        <li>Delivered a reference GitLab CI + TestCafe pipeline and drove its adoption across squads, replacing locally maintained Jenkins instances and Raspberry Pi wallboards.</li>
+        <li>Shifted feedback from dashboard watching to event-driven Slack alerts with links to online dashboards, reducing distraction and earning special recognition despite not being in the QA chapter.</li>
+        <li>Guided the move from legacy Java Selenium suites to Jest + Supertest, creating patterns and training that enabled full stack engineers to own API and UI tests.</li>
+      </ul>
       <div class="subhead">Strategic Planning and Collaboration</div>
       <ul>
         <li>Crafted a technical roadmap based on customer and product manager needs.</li>
@@ -348,10 +369,15 @@
         <li>Architected a low-power application in embedded C with FreeRTOS, integrating Sub-GHz communication with the Gateway device, and designed an MVP-patterned UI development framework for an e-paper display.</li>
         <li>Engineered feature-rich firmware, ensuring a 10-year battery life for power-constrained systems.</li>
         <li>Developed an over-the-air update solution through AWS OTA Agent library porting and proposed a solution for fleet provisioning and management focused on time-to-market efficiency.</li>
+        <li>Built a TeamCity-driven HIL runner on Raspberry Pi for the STM32 QA fleet and integrated Xray in Jira so automated HIL suites could be launched on-demand with a single button.</li>
         <li>Designed a comprehensive regression test framework using Salt, Docker, Python, Raspberry Pi, and TeamCity</li>
       </ul>
     </div>
 
+    
+  </div>
+
+  <div class="page page-linear">
     <div class="job-block">
       <div class="job-title-row"><div class="job-title">IoT Consultant (B2B Contract)</div><div class="job-date">March 2020 – Present</div></div>
       <div class="company-line">Rapid IoT Ltd – London</div>
@@ -368,10 +394,8 @@
         <li>Designed and 3D-printed a speaker case for a car audio system using a self-customized 3D printer, both hardware and firmware.</li>
       </ul>
     </div>
-  </div>
 
-  <div class="page page-linear">
-    <div class="job-block">
+<div class="job-block">
       <div class="job-title-row"><div class="job-title">Software Engineer</div><div class="job-date">October 2017 – March 2019</div></div>
       <div class="company-line">Gartenzwerg Technologies Ltd - London - <a href="https://www.seedrs.com/gartenzwerg">https://www.seedrs.com/gartenzwerg</a><br><a href="https://www.indiegogo.com/projects/gartenzwerg-pretty-smart-personal-gardens#/">https://www.indiegogo.com/projects/gartenzwerg-pretty-smart-personal-gardens#/</a></div>
       <div class="intro">Gartenzwerg is an automated indoor garden based on hydroponics, aimed at making plant growing at home effortless, enjoyable, and successful.</div>
@@ -404,3 +428,4 @@
   </div>
 </body>
 </html>
+
