@@ -1,0 +1,321 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Szabina Nagy | UX/UI Designer</title>
+  <style>
+    @page { size: A4; margin: 0; }
+    :root {
+      --paper-w: 210mm;
+      --paper-h: 297mm;
+      --ink: #1f2330;
+      --muted: #5c6073;
+      --accent: #7c6bb3;
+      --accent-soft: #efeafb;
+      --line: #e4dff1;
+      --line-strong: #d4cbe9;
+      --surface: #faf8fe;
+      --link: #0000EE;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #eef0f5;
+      color: var(--ink);
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      line-height: 1.4;
+      font-size: 10pt;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .page {
+      width: var(--paper-w);
+      min-height: var(--paper-h);
+      margin: 0 auto 8mm;
+      background: #fff;
+      padding: 10mm 12mm 11mm;
+      box-shadow: 0 4mm 10mm rgba(31, 35, 48, 0.10);
+      page-break-after: always;
+    }
+    .page:last-child { page-break-after: auto; }
+    a { color: var(--link); text-decoration: underline; }
+    header {
+      display: grid;
+      grid-template-columns: 1.18fr 0.92fr;
+      gap: 7mm;
+      padding: 0 0 5mm 0;
+      border-bottom: 1pt solid var(--line-strong);
+      align-items: start;
+    }
+    .name {
+      font-size: 20pt;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    .headline {
+      margin-top: 1.6mm;
+      font-size: 11.2pt;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .subhead {
+      margin-top: 2.3mm;
+      font-size: 9.45pt;
+      color: var(--muted);
+      max-width: 95%;
+    }
+    .contact {
+      justify-self: end;
+      font-size: 8.9pt;
+      color: var(--muted);
+      display: grid;
+      row-gap: 1.35mm;
+      text-align: right;
+    }
+    .label {
+      color: var(--ink);
+      font-weight: 700;
+      margin-right: 1.2mm;
+    }
+    .profile {
+      margin-top: 6mm;
+      padding: 4.2mm 4.6mm;
+      background: linear-gradient(180deg, var(--surface) 0%, #ffffff 100%);
+      border: 0.8pt solid var(--line);
+      border-radius: 3mm;
+    }
+    .profile h2, .section-title {
+      margin: 0 0 2.2mm 0;
+      font-size: 10.3pt;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .profile p {
+      margin: 0;
+      font-size: 9.55pt;
+      color: var(--ink);
+    }
+    .layout {
+      margin-top: 7mm;
+      display: grid;
+      grid-template-columns: 1.48fr 0.82fr;
+      gap: 8mm;
+    }
+    .main section + section,
+    .side section + section { margin-top: 6mm; }
+    .job {
+      margin-bottom: 5.6mm;
+      padding-left: 4mm;
+      border-left: 1.7mm solid var(--accent);
+    }
+    .job-head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 4mm;
+      align-items: end;
+    }
+    .job-title {
+      font-size: 10.45pt;
+      font-weight: 800;
+      color: var(--ink);
+    }
+    .job-company {
+      margin-top: 0.8mm;
+      font-size: 9.2pt;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .job-date {
+      font-size: 8.8pt;
+      color: var(--muted);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    ul { margin: 2.1mm 0 0 0; padding-left: 4.6mm; }
+    li { margin: 0.95mm 0; }
+    .bullets { font-size: 9.3pt; }
+    .card {
+      border: 0.8pt solid var(--line);
+      border-radius: 3mm;
+      padding: 3.3mm 3.6mm 3.6mm;
+      background: linear-gradient(180deg, var(--surface) 0%, #ffffff 100%);
+    }
+    .skills-grid {
+      display: grid;
+      gap: 2.2mm;
+      font-size: 9.2pt;
+    }
+    .skills-grid div span {
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .plain { margin: 0; padding-left: 4.6mm; font-size: 9.2pt; }
+    .muted { color: var(--muted); }
+    .tagline {
+      margin-top: 1mm;
+      font-size: 8.8pt;
+      color: var(--muted);
+    }
+    @media print {
+      body { background: #fff; }
+      .page { margin: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <div class="name">Szabina Nagy</div>
+        <div class="headline">UX/UI Designer</div>
+        <div class="subhead">With front-end skills and a strong visual design background in fast-paced cross-functional creative teams.</div>
+      </div>
+      <div class="contact">
+        <div><span class="label">Location</span>London, open to relocate</div>
+        <div><span class="label">Email</span><a href="mailto:szabina_nagy@outlook.com">szabina_nagy@outlook.com</a></div>
+        <div><span class="label">Phone</span>+44 7380 827 916</div>
+        <div><span class="label">Portfolio</span><a href="https://szabinanagyux.myportfolio.com">szabinanagyux.myportfolio.com</a></div>
+        <div><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/szabina-nagy">linkedin.com/in/szabina-nagy</a></div>
+        <div><span class="label">GitHub</span><a href="https://github.com/szabina-nagy">github.com/szabina-nagy</a></div>
+      </div>
+    </header>
+
+    <section class="profile">
+      <h2>Profile</h2>
+      <p>I create clear and engaging digital experiences by combining visual design with user-centred process. My background in themed entertainment strengthened my ability to work from briefs, design within real-world constraints, respond to feedback, and collaborate closely with 3D artists, architects, and production teams. I now bring that foundation into UX/UI design through research, wireframes, prototypes, usability testing, and responsive front-end implementation.</p>
+    </section>
+
+    <div class="layout">
+      <main class="main">
+        <section>
+          <h2 class="section-title">UX/UI Projects</h2>
+          <article class="job">
+            <div class="job-head">
+              <div>
+                <div class="job-title">ShareHaus</div>
+                <div class="job-company">App and responsive website case study</div>
+              </div>
+              <div class="job-date">2025 to 2026</div>
+            </div>
+            <ul class="bullets">
+              <li>Designed a shared-expense app and responsive website to help flatmates track bills, payments, and outstanding balances more transparently.</li>
+              <li>Led the end-to-end UX process including user research, personas, user flows, wireframing, prototyping, usability testing, and iteration.</li>
+              <li>Built and refined the designs in Figma, improving key journeys such as bill upload, payment tracking, one-click access to statistics, and payment history from the home screen.</li>
+              <li>Conducted a two-round unmoderated usability study and used the findings to simplify sign up, make core features easier to find, and reduce friction around paying flatmates.</li>
+            </ul>
+          </article>
+
+          <ul class="bullets">
+            <li>Completed the Google UX Design Professional Certificate, covering research synthesis, information architecture, wireframing, prototyping, and usability testing.</li>
+            <li>Completed freeCodeCamp certificates in Responsive Web Design, JavaScript Algorithms and Data Structures, and Front End Development Libraries.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="section-title">Relevant Experience</h2>
+
+          <article class="job">
+            <div class="job-head">
+              <div>
+                <div class="job-title">Concept Artist and Experience Designer</div>
+                <div class="job-company">Bearded Kitten | Contract</div>
+              </div>
+              <div class="job-date">Apr 2024 to Present</div>
+            </div>
+            <ul class="bullets">
+              <li>Designed visitor-facing visual installations for Winter Wonderland London, including gates, Santa Street elements, and illuminated panels across multiple seasons.</li>
+              <li>Produced 2D and 3D design assets in Photoshop and Blender to communicate concepts clearly and support collaboration with architects, 3D artists, and production teams.</li>
+              <li>Worked from briefs and tight deadlines, refining ideas through stakeholder feedback and real-world build constraints including budget and feasibility.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <div>
+                <div class="job-title">Concept Artist</div>
+                <div class="job-company">Imaginize | Contract</div>
+              </div>
+              <div class="job-date">2024 to Present</div>
+            </div>
+            <ul class="bullets">
+              <li>Created concept work for themed entertainment projects including Chessington World of Adventures Resort's upcoming Minecraft theme park extension and Legoland Florida and California's Galacticoaster.</li>
+              <li>Used Photoshop and Blender to develop presentation-ready visuals shaped by stakeholder review, practical delivery needs, and commercial constraints.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <div>
+                <div class="job-title">Concept Artist</div>
+                <div class="job-company">Scruffy Dog Creative</div>
+              </div>
+              <div class="job-date">May 2022 to Mar 2024</div>
+            </div>
+            <ul class="bullets">
+              <li>Created visual concepts and signage design across a high volume of themed entertainment, attraction, and resort projects, building experience across 30 to 50 fast-moving briefs.</li>
+              <li>Worked from creative briefs to deliver presentation-ready design work under deadlines, with frequent revision cycles shaped by stakeholder feedback.</li>
+              <li>Collaborated regularly with art direction, architects, 3D teams, and production partners to balance creative intent with practical constraints.</li>
+              <li>Supported projects for clients including Disney, NEOM, Sela Wonder Garden, Winter Wonderland, The Hive, and Bird World.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <div>
+                <div class="job-title">Concept Artist Intern</div>
+                <div class="job-company">Scruffy Dog Creative</div>
+              </div>
+              <div class="job-date">Jul 2021 to Apr 2022</div>
+            </div>
+            <ul class="bullets">
+              <li>Created pitch visuals and fast iterations that helped communicate narrative direction, atmosphere, and spatial intent.</li>
+            </ul>
+          </article>
+      </main>
+
+      <aside class="side">
+        <section class="card">
+          <h2 class="section-title">Skills</h2>
+          <div class="skills-grid">
+            <div><span>UX:</span> User research, personas, user flows, wireframes, prototypes, usability testing, responsive design, accessibility</div>
+            <div><span>UI and visual:</span> Layout, hierarchy, visual design, visual storytelling, interface design, brand expression, presentation design</div>
+            <div><span>Tools:</span> Figma, Miro, Adobe Photoshop, Illustrator, Blender, GitHub</div>
+            <div><span>Front-end:</span> HTML, CSS, JavaScript, React, component-based UI</div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Education</h2>
+          <ul class="plain">
+            <li>BSc in Set, Costume and Puppet Design, Hungarian University of Fine Arts</li>
+            <li>Concept Art Course, Escape Studios</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Coursework</h2>
+          <ul class="plain">
+            <li>Google UX Design Professional Certificate, completed</li>
+            <li>freeCodeCamp Responsive Web Design, completed</li>
+            <li>freeCodeCamp JavaScript Algorithms and Data Structures, completed</li>
+            <li>freeCodeCamp Front End Development Libraries, completed</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Languages</h2>
+          <ul class="plain">
+            <li>Hungarian - Native</li>
+            <li>English - Fluent</li>
+            <li>German - Conversational</li>
+            <li>Japanese - Basic</li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
